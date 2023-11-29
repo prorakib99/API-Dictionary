@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
     <title>Dictionary API</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +16,8 @@
           <div>
               <label for="search" class="sr-only" required="">Search</label>
                 <div class="relative mt-1 rounded-lg shadow-lg">
-                  <input type="text" name="search" id="search" class="block w-full rounded-lg border-gray-700 shadow-lg sm:text-lg my-8 px-5 py-3" placeholder="Search Word" value="">
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"><img src="./public/assets/icon-search.svg" alt="">
+                  <input type="text" name="search" id="search" class="block w-full rounded-lg border border-gray-200 shadow-lg sm:text-lg my-8 px-5 py-3" placeholder="Search Word" value="">
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"><img src="./assets/icon-search.svg" alt="">
                   </div>
                 </div>
           </div>
@@ -28,7 +29,8 @@
                 <h4 id="word-phonetic" class="text-purple-500">/ˈkiːbɔːd/</h4>
               </div>
               <div>
-                <button type="button" class="h-[48px] w-[48px] md:h-[75px] md:w-[75px] bg-contain rounded-full"><img src="./public/assets/icon-play.svg" alt="" srcset=""></button>
+                <button id="audio-btn" type="button" class="h-[48px] w-[48px] md:h-[75px] md:w-[75px] bg-contain rounded-full"><img src="./assets/icon-play.svg" alt="" srcset="">
+                </button>
               </div>
             </section>
 

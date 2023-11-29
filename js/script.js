@@ -21,10 +21,30 @@ const wordLoad = word => {
         return;
     }
 
+
     setWordDetails('word', word.word);
     setWordDetails('word-phonetic', word.phonetic);
     setWordDetails('source-link', word.sourceUrls[0]);
     document.getElementById('source-link').href = word.sourceUrls[0];
+
+    // Audio section 
+    const audio = () => {
+        const allAudio = word.phonetics;
+        for(const audio of allAudio) {
+            const audioLink = audio.audio
+            if(audioLink !== ''){
+                const link = new Audio(audioLink);
+                link.play();
+            }
+        }
+    }
+    
+    
+    document.getElementById('audio-btn').addEventListener('click', function(){
+        console.log('click');
+        audio();
+        document.getElementById('audio-btn').removeEventListener;
+    })
 
     const detailContainer = document.getElementById('detail-container');
     detailContainer.innerText = '';
@@ -74,6 +94,3 @@ document.getElementById('search').addEventListener('change', function(){
 })
 
 dataLoad('keyboard');
-
-// const testsd = document.querySelector('.detail-list');
-// console.log(testsd);
