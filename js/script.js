@@ -68,12 +68,12 @@ const wordLoad = word => {
         <div class="flex items-center gap-1 mb-8">
             <p class="font-[Courgette] font-bold text-xl">${checkUndefined(meaning.partOfSpeech)}</p><hr class="inline-block basis-full">
         </div>
-            <div class="word-details">
-                <p class="mb-4 text-stone-500 text-xl">Meaning</p>
-                <ul id="details-list-${i}" class="ms-12 list-disc mb-4">
-                    
-                </ul>
-                <div class="flex flex-wrap mt-8">
+        <div class="word-details">
+            <p class="mb-4 text-stone-500 text-xl">Meaning</p>
+            <ul id="details-list-${i}" class="ms-12 list-disc mb-4">
+                
+            </ul>
+            <div class="flex flex-wrap mt-8">
                 <p class="mr-4 text-stone-500 text-xl">${checkUndefined(meaning.synonyms[0]) ? 'Synonyms' : ''}</p>
                 <p class="text-purple-500 mr-1 font-bold text-xl">${checkUndefined(meaning.synonyms[0])}</p>
             </div>
