@@ -15,7 +15,7 @@
       <div class="w-full">
           <div>
               <label for="search" class="sr-only" required="">Search</label>
-                <div class="relative mt-1 rounded-lg shadow-lg">
+                <div class="relative mt-4 rounded-lg shadow-lg w-1/4 mx-auto">
                   <input type="text" name="search" id="search" class="block w-full rounded-lg border border-gray-200 shadow-lg sm:text-lg my-8 px-5 py-3" placeholder="Search Word" value="">
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"><img src="./assets/icon-search.svg" alt="">
                   </div>
@@ -28,9 +28,8 @@
                 <h2 id="word" class="font-bold text-5xl mb-3 font-[Frank Ruhl Libre]">keyboard</h2>
                 <h4 id="word-phonetic" class="text-purple-500">/ˈkiːbɔːd/</h4>
               </div>
-              <div>
-                <button id="audio-btn" type="button" class="h-[48px] w-[48px] md:h-[75px] md:w-[75px] bg-contain rounded-full"><img src="./assets/icon-play.svg" alt="" srcset="">
-                </button>
+              <div id="word-header">
+                <button id="audio-btn" type="button" class="h-[48px] w-[48px] md:h-[75px] md:w-[75px] bg-contain rounded-full bg-[url('../assets/icon-play.svg')]"></button>
               </div>
             </section>
 
@@ -42,7 +41,7 @@
             </div>
   
             <div class="flex items-center mb-6">
-              <p class="mr-4 text-sm text-stone-500">Source</p>
+              <p class="mr-4 text-base text-stone-500">Source</p>
               <p><a id="source-link" href="https://en.wiktionary.org/wiki/keyboard" target="_blank" class="underline"></a></p>
             </div>
 

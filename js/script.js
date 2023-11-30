@@ -5,7 +5,6 @@ const dataLoad = word => {
     .then(data => wordLoad(data[0]))
 }
 
-
 const setWordDetails = (setId, setValue) => {
     document.getElementById(setId).innerText = setValue ? setValue : '';
 }
@@ -21,7 +20,6 @@ const wordLoad = word => {
         return;
     }
 
-
     setWordDetails('word', word.word);
     setWordDetails('word-phonetic', word.phonetic);
     setWordDetails('source-link', word.sourceUrls[0]);
@@ -33,18 +31,25 @@ const wordLoad = word => {
         for(const audio of allAudio) {
             const audioLink = audio.audio
             if(audioLink !== ''){
-                const link = new Audio(audioLink);
-                link.play();
+                const play = new Audio(audioLink);
+                play.play();
+                return;
             }
         }
-    }
-    
-    
-    document.getElementById('audio-btn').addEventListener('click', function(){
+    } 
+
+    // Audio Button Regenerate
+    const wordHeading = document.getElementById('word-header');
+    wordHeading.innerText = '';
+    const buttonCreate = document.createElement('button');
+    buttonCreate.id = ('button-head');
+    buttonCreate.classList.add('h-[48px]', 'w-[48px]', 'md:h-[75px]', 'md:w-[75px]', 'bg-contain', 'rounded-full', "bg-[url('../assets/icon-play.svg')]")
+    wordHeading.appendChild(buttonCreate);
+
+    document.getElementById('button-head').addEventListener('click', function(){
         console.log('click');
-        audio();
-        document.getElementById('audio-btn').removeEventListener;
-    })
+        audio()
+    })  
 
     const detailContainer = document.getElementById('detail-container');
     detailContainer.innerText = '';
@@ -86,7 +91,7 @@ const wordLoad = word => {
             li.innerText = definition.definition;
             ul.appendChild(li);
         }
-    }      
+    }   
 }
 
 document.getElementById('search').addEventListener('change', function(){
